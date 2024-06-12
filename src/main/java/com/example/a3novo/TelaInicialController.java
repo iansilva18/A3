@@ -1,6 +1,9 @@
 package com.example.a3novo;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+
 
 import java.io.IOException;
 
@@ -13,7 +16,10 @@ public class TelaInicialController {
 
     @FXML
     private void irParaCadastroMedico() throws IOException {
-        // Adicione aqui a lógica para ir para a tela de cadastro de médico
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CadastroMedico.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        HelloApplication.changeScene("CadastroMedico.fxml");
+
     }
-}
+    }
 

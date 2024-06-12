@@ -30,6 +30,16 @@ public class CadastroController {
     private TextField pesoField;
 
     @FXML
+    private void voltar() {
+        try {
+            HelloApplication.changeScene("TelaInicial.fxml"); // Substitua "TelaAnterior.fxml" pelo nome do arquivo FXML da tela anterior
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    @FXML
     protected void salvarCadastro() throws IOException {
         String nome = nomeField.getText();
         String numeroEmergencia = numeroEmergenciaField.getText();

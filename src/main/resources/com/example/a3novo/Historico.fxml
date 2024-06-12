@@ -5,11 +5,16 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<VBox   xmlns="http://javafx.com/javafx"
-        xmlns:fx="http://javafx.com/fxml"
-        fx:controller="com.example.a3novo.HistoricoController" spacing="20"  alignment="CENTER" style="-fx-padding: 20;"  prefWidth="1000">
+<?import javafx.scene.control.Button?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.a3novo.HistoricoController" spacing="20" alignment="CENTER" style="-fx-padding: 20;" prefWidth="1000">
+
 
     <ListView fx:id="historicoListView" />
+
+    <Button text="Voltar" onAction="#voltar" />
+
 
 </VBox>
 

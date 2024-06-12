@@ -15,4 +15,6 @@
     <TextField fx:id="glicemiaField" promptText="Digite sua glicemia" />
     <Button text="Medir Glicemia" onAction="#salvarMedicao" />
     <Button fx:id="historicoButton" text="Histórico" onAction="#abrirHistorico" />
+    <Button text="Voltar" onAction="#voltar" />
+
 </VBox>

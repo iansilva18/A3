@@ -27,6 +27,15 @@ public class GlicemiaController {
     private HistoricoController historicoController;
 
     @FXML
+    private void voltar() {
+        try {
+            HelloApplication.changeScene("Cadastro.fxml"); // Substitua "TelaAnterior.fxml" pelo nome do arquivo FXML da tela anterior
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
     private void initialize() {
         // Configura a janela do histórico ao inicializar o controlador
 

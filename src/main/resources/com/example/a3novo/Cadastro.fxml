@@ -20,4 +20,6 @@
     <Label text="Peso:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
     <TextField fx:id="pesoField" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
     <Button text="Salvar" onAction="#salvarCadastro" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    <Button text="Voltar" onAction="#voltar" />
+
 </GridPane>

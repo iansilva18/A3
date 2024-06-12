@@ -11,4 +11,6 @@
 
     <Button text="Cadastro de Paciente" onAction="#irParaCadastroPaciente" />
     <Button text="Cadastro de Médico" onAction="#irParaCadastroMedico" />
+
+
 </VBox>
