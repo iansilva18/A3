@@ -10,6 +10,7 @@ module com.example.a3novo {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.sql;
 
     opens com.example.a3novo to javafx.fxml;
     exports com.example.a3novo;

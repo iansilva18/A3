@@ -1,10 +1,7 @@
 package com.example.a3novo;
-
-
 import java.time.LocalDate;
 
 public class Paciente {
-
     private String nome;
     private String numeroEmergencia;
     private LocalDate dataNascimento;

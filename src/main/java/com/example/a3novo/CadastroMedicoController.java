@@ -1,4 +1,3 @@
-// CadastroMedicoController.java
 package com.example.a3novo;
 
 import javafx.fxml.FXML;

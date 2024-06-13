@@ -1,16 +1,17 @@
 package com.example.a3novo;
 
 
+
+
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.time.LocalDate;
 
 public class CadastroController {
-
     @FXML
     private TextField nomeField;
 
@@ -32,12 +33,11 @@ public class CadastroController {
     @FXML
     private void voltar() {
         try {
-            HelloApplication.changeScene("TelaInicial.fxml"); // Substitua "TelaAnterior.fxml" pelo nome do arquivo FXML da tela anterior
+            HelloApplication.changeScene("TelaInicial.fxml"); // Substitua "TelaInicial.fxml" pelo nome do arquivo FXML da tela inicial
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 
     @FXML
     protected void salvarCadastro() throws IOException {
@@ -48,18 +48,15 @@ public class CadastroController {
         double altura = Double.parseDouble(alturaField.getText());
         double peso = Double.parseDouble(pesoField.getText());
 
-
         Paciente paciente = new Paciente(nome, numeroEmergencia, dataNascimento, idade, altura, peso);
 
-        // Salve o paciente conforme necessário (em um banco de dados, arquivo, etc.)
-        // ...
-
-        System.out.println("Nome: " + nome);
-        System.out.println("Número de Emergência: " + numeroEmergencia);
-        System.out.println("Data de Nascimento: " + dataNascimento);
-        System.out.println("Idade: " + idade);
-        System.out.println("Altura: " + altura);
-        System.out.println("Peso: " + peso);
+        PacienteDAO pacienteDAO = new PacienteDAO();
+        try {
+            pacienteDAO.inserirPaciente(paciente);
+            System.out.println("Paciente salvo no banco de dados!");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
         // Alterne para a tela de medir glicemia
         HelloApplication.changeScene("Glicemia.fxml");
