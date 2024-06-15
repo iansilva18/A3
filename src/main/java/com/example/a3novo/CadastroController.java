@@ -58,6 +58,15 @@ public class CadastroController {
             e.printStackTrace();
         }
 
+
+        System.out.println("Nome: " + nome);
+        System.out.println("Número de Emergência: " + numeroEmergencia);
+        System.out.println("Data de Nascimento: " + dataNascimento);
+        System.out.println("Idade: " + idade);
+        System.out.println("Altura: " + altura);
+        System.out.println("Peso: " + peso);
+
+
         // Alterne para a tela de medir glicemia
         HelloApplication.changeScene("Glicemia.fxml");
     }

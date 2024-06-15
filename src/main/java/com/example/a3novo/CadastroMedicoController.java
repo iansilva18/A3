@@ -5,6 +5,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class CadastroMedicoController {
 
@@ -36,6 +37,8 @@ public class CadastroMedicoController {
 
         // Salve os dados do médico conforme necessário
 
+
+
         // Exemplo: exibir os dados na saída
         System.out.println("Nome do Médico: " + nome);
         System.out.println("Especialidade: " + especialidade);
@@ -50,4 +53,15 @@ public class CadastroMedicoController {
         HelloApplication.changeScene("Historico.fxml");
     }
 
+    public String getNome() {
+        return "cadastrado";
+    }
+
+    public String getEspecialidade() {
+        return "cadastrado";
+    }
+
+    public String getCrm() {
+        return null;
+    }
 }

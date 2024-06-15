@@ -13,7 +13,6 @@
 
     <ListView fx:id="historicoListView" />
 
-    <Button text="Voltar" onAction="#voltar" />
 
 
 </VBox>
